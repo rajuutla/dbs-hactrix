@@ -1,0 +1,41 @@
+.hideerror{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+.booth {
+    width: 400px;
+    background: #ccc;
+    border: 10px solid #ddd;
+    margin: 0 auto;
+}
+
+.capture {
+    display: block;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: skyblue;
+}
+.half-width{
+   display: flex;       
+}
+.form-group{
+    margin-right: 10px !important;
+}
+.invalid-feedback {
+    display: block !important;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+.red{
+    color: red;
+}
+.container{
+    /* max-width: 380px; */
+}

@@ -1,0 +1,100 @@
+<section class="container">
+  <div class="container" fxLayout="column" fxLayoutGap="10px">
+
+    <div >
+      <div>
+        <h4>Enter Your Details</h4>
+        <hr>
+      </div>
+    </div>
+
+    <form novalidate [formGroup]="entryform" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="inputEmail4">Name</label>
+        <input #Name type="text" formControlName="name" class="form-control" placeholder="Full name">
+        <div class="red">
+          <span [hidden]="!(formErrors.name)">
+            {{formErrors.name}}
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input #number class="form-control" formControlName="telnum" id="contact" placeholder="Enter number" type="tel"
+          pattern="[0-9]{10}" required>
+        <div class="red">
+          <span [hidden]="!(formErrors.telnum)">
+            {{formErrors.telnum}}
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contact">Email</label>
+        <input class="form-control" formControlName="email" id="contact" placeholder="Enter Email" type="text" required>
+        <div class="red">
+          <span [hidden]="!(formErrors.email)">
+            {{formErrors.email}}
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="Profession">Profession</label>
+          <input #purpose class="form-control" formControlName="Profession" id="Profession" />
+        </div>
+        <div class="form-group">
+            <label for="Address">Address</label>
+            <textarea class="form-control" formControlName="address" id="Address" rows="2" ></textarea>
+        </div>
+      <div class="form-group">
+        <label for="MonthlySal">Monthly Salary</label>
+        <input #purpose class="form-control" formControlName="monthlysal" id="MonthlySal" pattern="[0-9]*" required />
+        <div class="red">
+          <span [hidden]="!(formErrors.monthlysal)">
+            {{formErrors.monthlysal}}
+          </span>
+        </div>
+      </div>
+     
+      <div class="form-group">
+        <label for="Interestrate">Interest Rate</label>
+        <input class="form-control" formControlName="Intrate" id="Interestrate" disabled />
+      </div>
+      <div class="form-group">
+        <label for="LoanAmount">Loan Amount</label>
+        <input class="form-control" formControlName="loanamt" id="LoanAmount" placeholder="Enter Loan Request"
+          pattern="[0-9]*" required />
+        <div class="red">
+          <span [hidden]="!(formErrors.loanamt)">
+            {{formErrors.loanamt}}
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="LoanTenure">Loan Tenure</label>
+        <select class="form-control" formControlName="LoanTenure" id="LoanTenure">
+          <option value="6">6 Months</option>
+          <option value="12">12 Months</option>
+          <option value="24">24 Months</option>
+        </select>
+      </div>
+      <div class="formp-group">
+        <label for="Pancard">PanCard number</label>
+        <input class="form-control" formControlName="pancard" id="Pancard" placeholder="Enter Pancard Number"
+          pattern="[0-9a-zA-Z]{10}" required />
+        <div class="red">
+          <span [hidden]="!(formErrors.pancard)">
+            {{formErrors.pancard}}
+          </span>
+        </div>
+      </div>
+      <div style="margin-top: 10px">
+      <button type="submit" class="btn btn-primary mt-10" [disabled]="this.entryform.invalid">Submit</button>
+     </div>
+    </form>
+
+  </div>
+
+
+
+</section>

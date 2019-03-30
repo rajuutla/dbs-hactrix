@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="grid-container">
+        <div class="row-wrapper header">
+            <div class="box a">#</div>
+            <div class="box b">Name</div>
+            <div class="box c">Req Number</div>
+            <div class="box d">Req Amount</div>
+            <div class="box e">Timestamp</div>
+            <div class="box f">Status</div>
+        </div>
+        <div class="row-wrapper" *ngFor="let entry of allEntries; let i = index">
+            <div class="box a">{{i+1}}</div>
+            <div class="box b">{{entry.name}}</div>
+            <div class="box c">{{entry.reqNumber}}</div>
+            <div class="box d">{{entry.timestamp | date: 'd/M/yy, h:mm a'}}</div>
+            <div class="box e">{{entry.reqAmount}}</div>
+            <div class="box f">{{entry.status }}</div>
+        </div>
+
+    </div>
+
+
+</section>
